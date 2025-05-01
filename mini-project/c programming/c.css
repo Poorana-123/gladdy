@@ -1,0 +1,261 @@
+/* Header Styles */
+.header {
+    background-color: #ffffff ; /* Dark brown */
+    color:#A66832 ;
+    padding: 5px 20px; /* Reduced padding to make the header shorter */
+    display: flex;
+    height: 50px; /* Reduced header height */
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
+}
+body{
+  overflow-x: hidden;
+}
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Navbar links (hidden on small screens) */
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+/* Navbar Links Hover Effect */
+.navbar-links li a {
+    color: #A66832;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+/* Highlight text on hover */
+.navbar-links li a:hover {
+    color: #ffffff; /* Highlight color (mild brown) */
+    background-color: #A66832; /* Light background effect */
+    border-radius: 5px; /* Optional: Add a slight border-radius for a smoother look */
+}
+
+/* Highlight the active link (if clicked) */
+.navbar-links li a.active {
+    color: #000000; /* Same highlight color as on hover */
+    background-color: rgb(255, 255, 255); /* Optional: Light background on active */
+}
+
+
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white; /* Mild brown */
+    color: #000000;
+    min-width: 120px;
+    min-height: 40px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+    padding: 7px 9px; /* Adds space between the top and bottom words */
+}
+
+.dropdown-menu li a {
+    color: black; /* Ensure the text is white */
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu li a:hover {
+    background-color: #bd691f; /* Highlight on hover */
+    color: #fff;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hamburger menu (for mobile screens) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links on mobile */
+        flex-direction: column;
+        background-color: #4E3629; 
+        
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .navbar-links li a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar.open .navbar-links {
+        display: flex; /* Show the menu when hamburger is clicked */
+    }
+}
+
+
+
+/*Footer*/
+body {
+    font-family: Arial, sans-serif;
+  }
+  footer {
+    background-color: #A66832;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 150px;
+    color: #e9ecef;
+  }
+  
+  .company-info {
+    flex: 2;
+  }
+  
+  .footer-section h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .newsletter-section {
+    flex: 2;
+  }
+  
+  .newsletter-section form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .newsletter-section input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+  }
+  
+  .newsletter-section button {
+    padding: 10px 20px;
+    background-color: #ff8f2d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .newsletter-section button:hover {
+    background-color: #512a09;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+    border-top: 1px solid #e9ecef;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    margin: 5px 0;
+    flex: 1;
+  }
+  
+  .footer-bottom a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .social-icons a:hover {
+    color: #ffffff;
+  }
+  

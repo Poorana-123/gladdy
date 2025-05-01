@@ -1,0 +1,299 @@
+<html>
+	<head>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="index.css">
+	  </head>
+
+	  <!-- Header Section -->
+<header class="header">
+    <div class="container">
+       
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="home.html" class="nav-link" onclick="highlightLink(event)">Home</a></li>
+
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">Courses</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="register.html" class="nav-link" onclick="highlightLink(event)">Java</a></li>
+                    <li><a href="register.html" class="nav-link" onclick="highlightLink(event)">Python</a></li>
+                  <li><a href="register.html" class="nav-link" onclick="highlightLink(event)">C</a></li>
+                <li><a href="register.html" class="nav-link" onclick="highlightLink(event)">Javascript</a></li>
+            </ul>
+              </li>
+
+              <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Practice</a></li>
+              <li><a href="Rent.html" class="nav-link" onclick="highlightLink(event)">Material</a></li>
+             
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">Profile</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="login.html" class="nav-link" onclick="highlightLink(event)">Login</a></li>
+                      <li><a href="register.html" class="nav-link" onclick="highlightLink(event)">Register</a></li>
+                  </ul>
+              </li>
+              </ul>
+
+            <!-- Hamburger Menu (3 lines) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+	  <body>
+		<div class=" container-fluid " id="dash" >
+		<h2>STUDENT REGISTRATION</h2>
+		<form action="{{ url_for('submit_registration') }}" method="POST" enctype="multipart/form-data">
+
+        <div class="container">
+		   <h3>Personal Details</h3>
+           <hr>
+           <ol>
+           <li><label for="name"><b>Name:</b></label>
+           <input type="text" placeholder="Enter in capital letters" name="name" required></li>
+		   
+		   <li><label for="email"><b>Email(Username):</b></label>
+           <input type="email" placeholder="abc@xyz.com" name="email" required></li>
+		   
+		   <li><label for="dob"><b>Date of birth:</b></label>
+           <input type="date" name="dob" required></li>
+
+           <li><label for="branch"><b>Branch:</b></label>
+	      <select name="branch" placeholder="Select">
+          <option label="cse">CSE</option>
+          <option label="it">IT</option>
+          <option label="ece">ECE</option>
+	      <option label="mee">MEE</option>
+	      <option label="msme">MSME</option>
+	      <option label="che">CHE</option>
+	      </select></li>
+
+          <li><label for="year"><b>Year of passing out:</b></label>
+          <input type="number" placeholder="Ex. 2019" name="year" required> </li>
+	
+	      <li><label for="cpi"><b>CPI            :</b></label>
+          <input type="decimal" placeholder="Out of 10" name="cpi" required max="10" min="0"></li>
+	
+          <li><label for="12p"><b>12th Percentage:</b></label>
+          <input type="decimal" placeholder="Ex.85.5" name="12p" required min="0" max="100"></li>
+	
+	      <li><label for="10p"><b>10th Percentage:</b></label>
+          <input type="decimal" placeholder="Ex.85.5" name="10p" required min="0" max="100"></li>
+		  
+		  <li><label for="pwd"><b>Password:</b></label>
+          <input type="password" placeholder="minimum 6 characters" name="pwd" required></li>
+		  
+		  <li><label for="phone"><b>Contact number:</b></label>
+          <input type="number" placeholder="" name="phone" required> </li>
+		  
+		  <li><label for="degree"><b>Course:</b></label>
+	      <select name="degree" placeholder="Select">
+          <option label="btech">B.Tech</option>
+		  <option label="btech">M.Tech</option>
+		  <option label="be">B.E</option>
+		  <option label="me">M.E</option>
+		   <option label="bca">BCA</option>
+          <option label="mca">MCA</option>
+	      <option label="msc">MSC</option>
+		  </select></li>
+		  
+			
+		  </ol>
+          <hr>
+
+    
+    <button type="submit" name="insert" class="registerbtn">Register</button>
+  </div>
+</form>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="index.html">Login</a>.</p>
+  </div>
+
+	</div>
+	</body>
+		 
+
+<br>
+
+  
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+      <!-- Company Information Section -->
+      <div class="footer-section company-info">
+        <h4>SHANMUGAM ASSOCIATES</h4>
+        <p>NO.5, MARIAMMAN KOVIL STREET,</p>
+        <p>VADAVALLI, COIMBATORE-641 046</p>
+        <p><strong>Phone:</strong> +91 9443522285</p>
+        <p><strong>Email:</strong> <a href="mailto:associatesshanmugam@gmail.com">associatesshanmugam@gmail.com</a></p>
+      </div>
+  
+      <!-- Useful Links Section -->
+      <div class="footer-section useful-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services Section -->
+      <div class="footer-section services">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Villa</a></li>
+          <li><a href="#">High Rise Building</a></li>
+          <li><a href="#">Painting</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Section -->
+      <div class="newsletter-section">
+        <h4>Subscribe to our newsletter</h4>
+        <p>Monthly digest of what's new and exciting from us.</p>
+        <form>
+          <input type="email" placeholder="Email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© Copyright SHANMUGAM ASSOCIATES. All Rights Reserved.</p>
+      <p>Designed by <a href="#">newway</a></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function openModal(button) {
+       const modal = document.getElementById("myModal");
+       const modalContent = modal.querySelector(".modal-content");
+       
+       // Get the image element
+       const img = button.parentElement.previousElementSibling;
+       const description = img.getAttribute('data-description');
+       
+       // Show modal
+       modal.style.display = "flex";
+       
+       // Set image and description
+       modalContent.innerHTML = `
+           <div class="modal-box">
+               <img src="${img.src}" alt="${img.alt}">
+               <div id="caption">${description}</div>
+           </div>`;
+   }
+   
+   function closeModal() {
+       const modal = document.getElementById("myModal");
+       modal.style.display = "none";
+   }
+   
+   
+   // Add event listeners to all images to open the modal on click
+   const images = document.querySelectorAll('.image-card img');
+   images.forEach(img => {
+       img.addEventListener('click', () => openModal(img));
+   });
+   
+   // Function to toggle the hamburger menu
+   function toggleMenu() {
+       const navbar = document.querySelector('.navbar');
+       navbar.classList.toggle('open');
+   }
+   
+   // Add active class to clicked link and remove it from others
+   const navbarLinks = document.querySelectorAll('.navbar-links li a');
+   navbarLinks.forEach(link => {
+       link.addEventListener('click', () => {
+           navbarLinks.forEach(link => link.classList.remove('active'));
+           link.classList.add('active');
+       });
+   });
+   
+   const scrollContainer = document.querySelector('.scroll-container');
+   const scrollLeft = document.getElementById('scroll-left');
+   const scrollRight = document.getElementById('scroll-right');
+   
+   scrollLeft.addEventListener('click', () => {
+     scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+   });
+   
+   scrollRight.addEventListener('click', () => {
+     scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+   });
+   
+   
+   document.addEventListener("DOMContentLoaded", () => {
+     // Select all elements with the 'count' class
+     const counters = document.querySelectorAll(".count");
+   
+     // Function to animate counting
+     const animateCount = (counter) => {
+       const target = +counter.getAttribute("data-target");
+       const increment = Math.ceil(target / 200); // Adjust speed
+       let current = 0;
+   
+       const updateCounter = () => {
+         if (current < target) {
+           current += increment;
+           counter.textContent = current > target ? target : current;
+           setTimeout(updateCounter, 10); // Adjust speed
+         }
+       };
+       updateCounter();
+     };
+   
+     // Create an Intersection Observer
+     const observer = new IntersectionObserver(
+       (entries) => {
+         entries.forEach((entry) => {
+           if (entry.isIntersecting) {
+             animateCount(entry.target); // Start counting when visible
+             observer.unobserve(entry.target); // Stop observing after counting
+           }
+         });
+       },
+       { threshold: 0.5 } // Trigger when 50% of the section is visible
+     );
+   
+     // Observe each counter
+     counters.forEach((counter) => observer.observe(counter));
+   });
+   
+   const slider = document.querySelector('.feedback-wrapper');
+           const feedbacks = document.querySelectorAll('.feedback');
+           const totalFeedbacks = feedbacks.length;
+           let currentIndex = 0;
+   
+           function slideFeedback() {
+               currentIndex = (currentIndex + 1) % totalFeedbacks;
+               slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+           }
+   
+           setInterval(slideFeedback, 2000);
+   
+   </script>
+
+</body>
+</html>

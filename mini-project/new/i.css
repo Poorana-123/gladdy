@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+  }
+  .actions button {
+    background-color: #8a4fff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  .hero-text {
+    max-width: 50%;
+  }
+  .hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .job-toggle {
+    margin: 20px 0;
+  }
+  .search-bar {
+    margin: 20px 0;
+  }
+  .search-bar input, .search-bar select {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    margin-right: 10px;
+  }
+  .search-bar button {
+    background: linear-gradient(to right, #d88fef, #fca4e8);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  .sample-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #8a4fff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .hero-image img {
+    max-width: 500px;
+    width: 100%;
+  }

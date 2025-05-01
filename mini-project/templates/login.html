@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<style>
+    /* General Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ffffff; /* Theme background color */
+      color: #fff;
+      overflow: hidden;
+    }
+    
+    /* Wrapper for the Login Section */
+    .login-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      max-width: 1050px;
+      background: rgba(255, 255, 255, 0.817); /* Slight transparency for contrast */
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Login Box */
+    .login-box {
+      flex: 1;
+      padding: 40px;
+      width: 400px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #A66832; /* Theme highlight color */
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    form input {
+      background: rgba(116, 116, 116, 0.194);
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #000000;
+      outline: none;
+    }
+    
+    form input::placeholder {
+      color: #969393;
+    }
+    
+    form button {
+      background: #A66832; /* Theme button color */
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    form button:hover {
+      background: #5d361d; /* Darker shade for hover effect */
+    }
+    
+    .links {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .links a {
+      color: #a6a4a4;
+      text-decoration: none;
+      font-size: 12px;
+      transition: color 0.3s;
+    }
+    
+    .links a:hover {
+      color: #070707;
+    }
+    
+    /* Illustration Section */
+    .illustration {
+      flex: 1;
+      text-align: right;
+    }
+    
+    .illustration img {
+      max-width: 300px;
+      animation: float 4s infinite ease-in-out;
+    }
+    
+    /* Floating Animation */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    /* Background Circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08); /* Reduced opacity */
+  z-index: -1; /* Push circles behind all other elements */
+}
+
+/* Individual Circles */
+.circle-small {
+  width: 200px;
+  height: 200px;
+  top: -60px;
+  left: -50px;
+  background: rgba(223, 141, 68, 0.2); /* Theme circle color with reduced opacity */
+}
+
+.circle-medium {
+  width: 250px;
+  height: 250px;
+  bottom: -90px;
+  left: 20%;
+  background: rgba(255, 123, 7, 0.2); /* Theme circle color with reduced opacity */
+}
+
+.circle-large {
+  width: 300px;
+  height: 300px;
+  top: -80px;
+  right: -100px;
+  background: rgba(236, 132, 40, 0.1); /* Theme circle color with reduced opacity */
+}
+
+/* Adjust z-index for the form container */
+.login-wrapper {
+  position: relative; /* Ensures stacking context for z-index */
+  z-index: 2; /* Place the form above the circles */
+}
+
+    
+
+    </style>
+    
+
+
+<body>
+    <div class="login-wrapper">
+        <!-- Background Circles -->
+        <div class="circle circle-small"></div>
+        <div class="circle circle-large"></div>
+        <div class="circle circle-medium"></div>
+        
+        <!-- Login Section -->
+        <div class="login-box">
+          <h1>LOGIN</h1>
+          <form>
+            <input type="text" placeholder="USERNAME" required>
+            <input type="password" placeholder="PASSWORD" required>
+            <button type="submit">SUBMIT</button>
+          </form>
+          <div class="links">
+            <a href="#">REGISTER</a>
+            <a href="#">FORGOT PASSWORD?</a>
+          </div>
+        </div>
+      
+        <!-- Illustration Section -->
+        <div class="illustration">
+          <img src="assets/logo.png" alt="3D Illustration">
+        </div>
+      </div>
+      
+</body>
+</html>

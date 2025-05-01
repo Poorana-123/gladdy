@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-6">
+
+<div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-2xl">
+  <h2 class="text-2xl font-bold mb-6">Interview Details</h2>
+
+  <!-- Position -->
+  <div class="bg-gray-100 rounded-lg p-4 mb-6">
+    <h3 class="text-lg font-semibold">Sales Executive</h3>
+  </div>
+
+  <!-- Resume Upload -->
+  <div class="mb-6">
+    <p class="text-gray-700 font-semibold">Resume Based Interview: <span class="text-gray-500">(Optional)</span></p>
+    <button class="mt-2 px-4 py-2 bg-gray-300 rounded-md font-semibold text-gray-700 hover:bg-gray-400">Upload Resume</button>
+  </div>
+
+  <!-- Select Round & Difficulty Level -->
+  <div class="grid grid-cols-2 gap-6 mb-6">
+    <div>
+      <p class="font-semibold mb-2">Select Round <span class="text-red-500">*</span></p>
+      <div class="flex flex-wrap gap-2">
+        <button class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">Warm Up</button>
+        <button class="px-4 py-2 bg-blue-100 rounded-md text-blue-700 font-bold">Coding</button>
+        <button class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">Role Related</button>
+        <button class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">Behavioral</button>
+      </div>
+    </div>
+    <div>
+      <p class="font-semibold mb-2">Difficulty Level <span class="text-red-500">*</span></p>
+      <div class="flex gap-2">
+        <button class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">Beginner</button>
+        <button class="px-4 py-2 bg-purple-100 text-purple-700 rounded-md font-bold">Professional</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interview Duration -->
+  <div class="mb-6">
+    <p class="font-semibold mb-2">Interview Duration <span class="text-red-500">*</span></p>
+    <div class="flex gap-4">
+      <button class="px-4 py-2 bg-purple-200 text-purple-700 rounded-md font-semibold">5 mins</button>
+      <button class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">15 mins</button>
+      <button class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">30 mins</button>
+    </div>
+  </div>
+
+  <!-- Select Interviewer -->
+  <div class="mb-6">
+    <p class="font-semibold mb-2">Select Your Interviewer <span class="text-red-500">*</span></p>
+    <div class="flex gap-4">
+      <!-- Interviewer Card -->
+      <div class="flex flex-col items-center p-2 bg-gray-100 rounded-lg">
+        <img src="https://via.placeholder.com/50" class="rounded-full mb-2" alt="Payal">
+        <p class="font-semibold text-sm">Payal</p>
+        <p class="text-xs text-gray-500">IN English</p>
+      </div>
+      <div class="flex flex-col items-center p-2 bg-purple-100 rounded-lg border border-purple-400">
+        <img src="https://via.placeholder.com/50" class="rounded-full mb-2" alt="Emma">
+        <p class="font-semibold text-sm">Emma</p>
+        <p class="text-xs text-gray-500">US English</p>
+      </div>
+      <div class="flex flex-col items-center p-2 bg-gray-100 rounded-lg">
+        <img src="https://via.placeholder.com/50" class="rounded-full mb-2" alt="John">
+        <p class="font-semibold text-sm">John</p>
+        <p class="text-xs text-gray-500">US English</p>
+      </div>
+      <div class="flex flex-col items-center p-2 bg-gray-100 rounded-lg">
+        <img src="https://via.placeholder.com/50" class="rounded-full mb-2" alt="Kapil">
+        <p class="font-semibold text-sm">Kapil</p>
+        <p class="text-xs text-gray-500">IN English</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Practice Settings -->
+  <div class="mb-6">
+    <p class="font-semibold mb-2">Practice Settings <span class="text-red-500">*</span></p>
+    <div class="flex gap-4">
+      <label class="inline-flex items-center">
+        <input type="checkbox" class="form-checkbox text-purple-600" disabled>
+        <span class="ml-2 text-gray-500 line-through">Audio</span>
+      </label>
+      <label class="inline-flex items-center">
+        <input type="checkbox" class="form-checkbox text-purple-600" checked>
+        <span class="ml-2">Video</span>
+      </label>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">Note: Video will be deleted after 30 mins.</p>
+  </div>
+
+  <!-- Terms -->
+  <div class="mb-6">
+    <label class="inline-flex items-center">
+      <input type="checkbox" class="form-checkbox text-purple-600">
+      <span class="ml-2 text-sm">I agree with the <a href="#" class="text-purple-600 underline">terms and conditions</a>.</span>
+    </label>
+  </div>
+
+</div>
+
+</body>
+</html>

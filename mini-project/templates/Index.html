@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Project-RE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index(1).css') }}">
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+       
+
+        <!-- Navbar -->
+        <nav class="navbar">
+          <input 
+  type="text" 
+  placeholder="Search position" 
+  className="border border-gray-300 rounded-lg px-4 py-2 w-full sm:w-64"
+/>
+
+            <ul class="navbar-links">
+              <div class="menu">
+                <div class="dropdown">
+                  <button class="dropbtn">Interviews</button>
+                  <div class="dropdown-content">
+                    <div class="section">
+                      <h4>By Position</h4>
+                      <a href="software.html">Software Engineer</a>
+                      <a href="business.html">Business Analyst</a>
+                      <a href="data.html">Data Analyst</a>
+                      <a href="sales.html">Sales Executive</a>
+                      <a href="ml.html">Machine Learning Engineer</a>
+                      <a href="devops.html">DevOps Engineer</a>
+                      <a href="#">Explore More &#187;</a>
+                    </div>
+                    <div class="section">
+                      <h4>By Company</h4>
+                      <a href="#">JPMorgan Chase</a>
+                      <a href="#">Netflix</a>
+                      <a href="#">HCL</a>
+                      <a href="#">NVIDIA</a>
+                      <a href="#">Cognizant</a>
+                      <a href="#">Wipro</a>
+                      <a href="#">Explore More &#187;</a>
+                    </div>
+                    <div class="section">
+                      <h4>Other Interviews</h4>
+                      <a href="#">Salary Negotiation Interview</a>
+                      <a href="#">Interviews by Job Description</a>
+                      <a href="#">Create Your Interview</a>
+                      <a href="#">System Design Interview</a>
+                    </div>
+                  </div>
+                </div>
+
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">Courses</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{{ url_for('java_course') }}" class="nav-link" onclick="highlightLink(event)">Java</a></li>
+                    <li><a href="{{ url_for('python_course') }}" class="nav-link" onclick="highlightLink(event)">Python</a></li>
+                    <li><a href="{{ url_for('c_course') }}" class="nav-link" onclick="highlightLink(event)">C</a></li>
+                
+                  <li><a href="{{ url_for('html_course') }}" class="nav-link" onclick="highlightLink(event)">HTML</a></li>
+                  <li><a href="{{ url_for('css_course') }}" class="nav-link" onclick="highlightLink(event)">CSS</a></li>
+                  <li><a href="{{ url_for('js_course') }}" class="nav-link" onclick="highlightLink(event)">Javascript</a></li>
+                  <li><a href="{{ url_for('react_course') }}" class="nav-link" onclick="highlightLink(event)">SQL</a></li>
+                
+            </ul>
+              </li>
+
+              <li><a href="contact.html" class="nav-link" onclick="highlightLink(event)">Solutions</a></li>
+              
+             
+                <li class="dropdown">
+                  <a href="#" class="nav-link" onclick="toggleDropdown(event)">Profile</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{{ url_for('login') }}" class="nav-link" onclick="highlightLink(event)">Login</a></li>
+                    <li><a href="{{ url_for('register') }}" class="nav-link" onclick="highlightLink(event)">Register</a></li>
+                  </ul>
+              </li>
+              </ul>
+
+            <!-- Hamburger Menu (3 lines) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="overlay">
+        <div class="hero-content">
+            
+            <h1>Building Your Dreams Today</h1>
+            <p>Don't watch the clock, do what it does.Keep going to achieve your job.</p>
+            <a href="#" class="hero-button">Start</a>
+        </div>
+    </div>
+</div>
+
+<!-- Gallery Section -->
+<div class="gallery row">
+    <div class="gallery-item col-md-4">
+        <div class="card">
+            <img src="python.png" alt="Image 1" class="card-img-top"  data-description=" Modern living spaces designed for comfort and convenience. These apartments offer amenities like 24/7 security, community areas, and easy access to shopping and transportation, making them ideal for urban lifestyles.
+            ">
+            <div class="card-body">
+                <h4 class="card-title">Python</h4>
+                <a href="python.html"><button class="btn btn-primary" onclick="openModal(this)">View Details</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item col-md-4">
+        <div class="card">
+            <img src="ja.png" alt="Image 2" class="card-img-top" data-description="Luxurious, spacious homes that provide privacy and elegance. With large gardens, private pools, and premium fittings, these villas offer a serene retreat from the hustle of city life, perfect for those who appreciate the finer things.">
+            <div class="card-body">
+                <h4 class="card-title">Java</h4>
+                <a href="java.html"><button class="btn btn-primary" onclick="openModal(this)">View Details</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item col-md-4">
+        <div class="card">
+            <img src="c.png" alt="Image 3" class="card-img-top" data-description="Bustling commercial centers that combine shopping, dining, and entertainment. These malls house numerous retail stores, restaurants, cinemas, and play areas, making them a one-stop destination for families and friends.">
+            <div class="card-body">
+                <h4 class="card-title">C Programming</h4>
+                <a href="c.html"><button class="btn btn-primary" onclick="openModal(this)">View details</button></a>
+           
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item col-md-4">
+        <div class="card">
+            <img src="html.png" alt="Image 4" class="card-img-top" data-description=" Grand, luxurious estates offering opulence, peaceful life, and serenity. These mansions feature expansive grounds, exquisite architecture, and state-of-the-art facilities, providing an unmatched living experience for the elite.">
+            <div class="card-body">
+                <h4 class="card-title">HTML</h4>
+                <a href="h.html"><button class="btn btn-primary" onclick="openModal(this)">View Details</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item col-md-4">
+      <div class="card">
+          <img src="css.png" alt="Image 1" class="card-img-top"  data-description=" Modern living spaces designed for comfort and convenience. These apartments offer amenities like 24/7 security, community areas, and easy access to shopping and transportation, making them ideal for urban lifestyles.
+          ">
+          <div class="card-body">
+              <h4 class="card-title">CSS</h4>
+              <a href="css.html"><button class="btn btn-primary" onclick="openModal(this)">View Details</button></a>
+          </div>
+      </div>
+  </div>
+  <div class="gallery-item col-md-4">
+      <div class="card">
+          <img src="js.png" alt="Image 2" class="card-img-top" data-description="Luxurious, spacious homes that provide privacy and elegance. With large gardens, private pools, and premium fittings, these villas offer a serene retreat from the hustle of city life, perfect for those who appreciate the finer things.">
+          <div class="card-body">
+              <h4 class="card-title">Javascript</h4>
+              <a href="js.html"><button class="btn btn-primary" onclick="openModal(this)">View Details</button></a>
+          </div>
+      </div>
+  </div>
+  <div class="gallery-item col-md-4">
+      <div class="card">
+          <img src="database.png" alt="Image 3" class="card-img-top" data-description="Bustling commercial centers that combine shopping, dining, and entertainment. These malls house numerous retail stores, restaurants, cinemas, and play areas, making them a one-stop destination for families and friends.">
+          <div class="card-body">
+              <h4 class="card-title">SQL</h4>
+              <a href="sql.html"><button class="btn btn-primary" onclick="openModal(this)">View Details</button></a>
+          </div>
+      </div>
+  </div>
+  <div class="gallery-item col-md-4">
+      <div class="card">
+          <img src="assets/mansion.webp" alt="Image 4" class="card-img-top" data-description=" Grand, luxurious estates offering opulence, peaceful life, and serenity. These mansions feature expansive grounds, exquisite architecture, and state-of-the-art facilities, providing an unmatched living experience for the elite.">
+          <div class="card-body">
+              <h4 class="card-title">React Js</h4>
+              <a href="react.html"><button class="btn btn-primary" onclick="openModal(this)">View Details</button></a>
+          </div>
+      </div>
+  </div>
+  
+  </div>
+
+  
+
+
+<br>
+
+
+
+ 
+  
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+      <!-- Company Information Section -->
+      <div class="footer-section company-info">
+        <h4>AI powered interview tool</h4>
+        <p><strong>Phone:</strong> +91 9999999999</p>
+        <p><strong>Email:</strong> <a href="aibot@gmail.com">aibot@gmail.com</a></p>
+      </div>
+  
+      <!-- Useful Links Section -->
+      <div class="footer-section useful-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">course</a></li>
+          <li><a href="#">materials</a></li>
+          <li><a href="#">dashboard</a></li>
+          <li><a href="#">projects</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services Section -->
+      <div class="footer-section services">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Interview preparation</a></li>
+          <li><a href="#">Mock test</a></li>
+          <li><a href="#">doubt solving</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Section -->
+     
+      
+    <div class="newsletter-section">
+      <h4>Subscribe to our newsletter</h4>
+      <p>Monthly digest of what's new and exciting from us.</p>
+      <!-- Footer Section in templates/inndex.html -->
+
+<form action="{{ url_for('subscribe') }}" method="POST">
+  <input type="email" name="email" placeholder="Email address" required>
+  <button type="submit">Subscribe</button>
+</form>
+
+<!-- Flash messages (will show after form submission) -->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flash-messages">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+        
+    </div>
+  </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© Copyright. All Rights Reserved.</p>
+      <p>Designed by <a href="#">newway</a></p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function goToPage() {
+      window.location.href = "c.html"; // Replace with your target URL
+    }
+  </script>
+  
+
+</body>
+</html>
